@@ -14,17 +14,27 @@ console.log(anoAtual);
 
 //Agência de viagem Tokyo Paris Cuba Madrid China 
 const listaDeDestinos = new Array(
-  "Tokyo",
-  "Paris",
-  "Cuba",
-  "Madrid",
-  "China"
+  " Tokyo",
+  " Paris",
+  " Cuba",
+  " Madrid",
+  " China"
 );
 
 console.log(listaDeDestinos);
 console.log(listaDeDestinos[3]);
-listaDeDestinos.push("Coronel Vivida");
-listaDeDestinos.push("Curitiba");
-listaDeDestinos.push("Rio Branco");
-listaDeDestinos.push("Berín");
+listaDeDestinos.push(" Coronel Vivida");
+listaDeDestinos.push(" Curitiba");
+listaDeDestinos.push(" Rio Branco");
+listaDeDestinos.push(" Berín");
 console.log(listaDeDestinos);
+
+
+const idadeComprador = 15;
+
+if(idadeComprador <18) {
+ console.log("infelizmente não podemos vender passagens para menores de idades");
+} else 
+{
+  console.log("Comprador maior de idade");
+  console.log("destinos disponíveis : " + listaDeDestinos);
