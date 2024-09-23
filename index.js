@@ -42,6 +42,15 @@ console.log("infelizmente não podemos vender passagens para menores de idades")
 {  
   console.log("olá senhor(a)" + nomeComprador);
   console.log("Comprador maior de idade");
-  console.log("destinos disponíveis : " + listaDeDestinos);
+  console.log("Escolha seu destino");
+  
+  var contador= 0;
 
+  while(contador <9){
+    console.log(listaDeDestinos[contador]);
+    contador++;
+  }
+  var destino = entrada("digite o número que corresponde ao destino selecionado (0-8)");
+  console.log("Destino selecionado foi :"`${listaDeDestinos[destino]}`);
 }
+
