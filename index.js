@@ -1,56 +1,72 @@
-const prompt = require("prompt-sync");
+const prompt = require('prompt-sync');
 const entrada = prompt();
 let idade = 18;
 const anoNascimento = 2006;
 let anoAtual = 2024;
-const nomeCompleto = "Jayesky Perdigón";
+const nomeCompleto = "Jayesky"
 
-console.log("Meu nome é " + nomeCompleto + " nacido no ano de " + anoNascimento + " e no ano atual " + anoAtual +" completo " + idade + " anos");
+console.log("Meu nome é " + nomeCompleto + " nascido no ano de " + anoNascimento + " e no ano atual" + " completo " + idade + " anos");
+anoAtual = anoAtual + 1;
+console.log (anoAtual);
 
-anoAtual = anoAtual +1;
-idade = idade +1;
+idade = idade + 1;
+console.log (idade);
 
-console.log(idade);
-console.log(anoAtual);
-
-
-//Agência de viagem Tokyo Paris Cuba Madrid China 
+//Agência de viagens Madrid New York Buenos Aires Tokyo Barcelona
+console.log("");
+console.log("-------------------------------");
+console.log("------âgencia de viagens-------");
+console.log("");
 const listaDeDestinos = new Array(
-  " Tokyo",
-  " Paris",
-  " Cuba",
   " Madrid",
-  " China"
+  " Londres",
+  " Manchester",
+   " Tokyo",
+  " Barcelona"
 );
-
+console.log("");
 console.log(listaDeDestinos);
 console.log(listaDeDestinos[3]);
-listaDeDestinos.push(" Coronel Vivida");
-listaDeDestinos.push(" Curitiba");
-listaDeDestinos.push(" Rio Branco");
-listaDeDestinos.push(" Berín");
+listaDeDestinos.push("Coronel Vivida");
 console.log(listaDeDestinos);
+listaDeDestinos.push("Curitiba")
+listaDeDestinos.push("Rio Branco");
+listaDeDestinos.push("Berlin");
+console.log(listaDeDestinos);
+console.log(" " );
 
-var nomeComprador = entrada("Digite seu nome:");
 
-var idadeComprador = entrada("Qual é a sua idade?");
+const loginCerto = "Jayesky";
+const senhaCerta = 1234;
 
-if(idadeComprador <18) {
-  console.log("olá senhor(a)" + nomeComprador);
-console.log("infelizmente não podemos vender passagens para menores de idades");
-} if(idadeComprador >=18)
-{  
-  console.log("olá senhor(a)" + nomeComprador);
+var login = entrada("Qual é seu login?: ");
+var senha = entrada("Digite sua senha: ");
+
+while(login != loginCerto || senha != senhaCerta){
+  console.log ("Login ou senha incorretos");
+  login = entrada("Qual é o seu login?: ");
+  senha = entrada("Digite sua senha: ")
+}
+
+
+var nomeComprador = entrada("Digite seu nome: ");
+var idadeComprador = entrada("Digite sua idade: ");
+
+if(idadeComprador<18) {
+  console.log ("Olá senhor(a)" + nomeComprador);
+  console.log("infelizmente não podemos vender passagens para menores de idade");
+}
+if(idadeComprador >=18) {
+  console.log ("Olá senhor(a)" + nomeComprador);
   console.log("Comprador maior de idade");
   console.log("Escolha seu destino");
-  
-  var contador= 0;
+
+  var contador = 0;
 
   while(contador <9){
     console.log(listaDeDestinos[contador]);
     contador++;
   }
-  var destino = entrada("digite o número que corresponde ao destino selecionado (0-8)");
-  console.log("Destino selecionado foi :"`${listaDeDestinos[destino]}`);
-}
-
+  var destino = entrada("Digite o numero que corresponde ao destino selecionado (0-8)");
+  console.log(`destino selecionado foi: ${listaDeDestinos[destino]}`);
+  }
